@@ -5,6 +5,7 @@ import React from 'react'
 
 interface UserInputProps {
     // () => void (callback function / function that will be executed after pass the data)
+    // (name:string) => Data passed by the function to parent
     onNameChange: (name:string) => void;
 }
 
@@ -41,4 +42,4 @@ const UserInput: React.FC<UserInputProps> = ({onNameChange}) => {
   )
 }
 
-export default UserInput: React.FC<UserInputProps>
+export default UserInput;
