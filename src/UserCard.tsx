@@ -3,6 +3,7 @@
 // To define our data / model class (OOP)
 
 import type React from "react";
+import ProfileCard, { type Profile } from "./ProfileCard";
 
 // Typescript type - safecheck
 type Role = "ADMIN" | "USER" | "GUEST";
@@ -22,13 +23,17 @@ export interface User {
 // Declare  the type of props that this component will receive
 // Follow declaration highlighted in yellow in page 8 of the lab
 
-const UserCard:React.FC<{user:User}> = ({user}) => {
+
+// Add profile:Profile to be passed as props as well
+
+const UserCard:React.FC<{user:User, profile:Profile}> = ({user, profile}) => {
   return (
     <div>
         <h2>Name: {user.name}</h2>
         <p>Age: {user.age}</p>
         <p>Email: {user.email}</p>
         <p>Role: {user.role}</p>
+        <ProfileCard bio={profile.bio} website={profile.website}/>
     </div>
   )
 }
