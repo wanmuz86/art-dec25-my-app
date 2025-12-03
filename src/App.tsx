@@ -5,6 +5,8 @@ import type { Profile } from './ProfileCard'
 import type { User } from './UserCard'
 import UserCard from './UserCard'
 import UserInput from './UserInput'
+import Counter from './Counter'
+import ConditionalRendering from './ConditionalRendering'
 
 // Creating the constant to be shown in the UI
 
@@ -49,6 +51,10 @@ function App() {
      <UserInput onNameChange={handleOnNameChanged}/>
      <hr />
      <h2>Lab 5 (Counter - State)</h2>
+     <Counter/>
+     <hr />
+     <h2>Lab 9   (Conditional Rendering) </h2>
+     <ConditionalRendering/>
     </>
   )
 }

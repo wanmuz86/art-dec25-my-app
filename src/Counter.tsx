@@ -24,10 +24,10 @@ const Counter:React.FC = () => {
     */
    const increment = () => setCount(count+1);
    const decrement = () => setCount(count-1);
-   
+
   return (
   <div>
-        <h3 style={{fontSize:'32px', textAlign:'center'}}>Counter : {count}</h3>
+        <h3 style={{fontSize:'32px', textAlign:'left'}}>Counter : {count}</h3>
         <button onClick={increment}>Increment</button>
         <button onClick={decrement}>Decrement</button>
     </div>
