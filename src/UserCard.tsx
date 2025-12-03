@@ -5,10 +5,13 @@
 import type React from "react";
 
 // Typescript type - safecheck
+type Role = "ADMIN" | "USER" | "GUEST";
+
 export interface User {
     name:string;
     age:number;
     email:string;
+    role:Role;
 }
 
 // Change the props type to User
@@ -25,6 +28,7 @@ const UserCard:React.FC<{user:User}> = ({user}) => {
         <h2>Name: {user.name}</h2>
         <p>Age: {user.age}</p>
         <p>Email: {user.email}</p>
+        <p>Role: {user.role}</p>
     </div>
   )
 }

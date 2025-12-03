@@ -8,7 +8,8 @@ import UserCard from './UserCard'
 const user: User = {
   name: "Alice",
   age:28,
-  email:"alice@example.com"
+  email:"alice@example.com",
+  role:"ADMIN" as const 
 }
 
 function App() {
