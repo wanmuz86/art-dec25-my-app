@@ -18,11 +18,12 @@ const UserInput: React.FC<UserInputProps> = ({onNameChange}) => {
     // This function will be called everytime user enter info the input
     // "w", "a" , "n"
     // event => refer to the "typing" event from the input
-    // event.target.value / Value entered user as user is typing
+    // event.target => form element / input
+    // event.target.value / current value of the input
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         // 5
-        // AS user is typing, i will pass the data entered by user to the parent
+        // AS user is typing, i will pass the current value of the input to the parent
         // I pass it through the props passed from parent / onNameChange
 
         onNameChange(event.target.value);

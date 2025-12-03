@@ -1,4 +1,5 @@
 
+import { useState } from 'react'
 import './App.css'
 import type { Profile } from './ProfileCard'
 import type { User } from './UserCard'
@@ -20,9 +21,20 @@ const profile: Profile = {
 }
 
 function App() {
-  
+
+  // State in React is data that can change over time and causes the UI to update when it changes.
+  // State is a React-managed variable that stores component data and triggers a re-render when updated.
+  // getter / setter
+
+  // Declare a state, the getter = userName, setter = setUserName
+// The initial value = ""
+  const [userName, setUserName] = useState<string>("");
+
   const handleOnNameChanged = (name:string)=> {
     console.log(name);
+    
+    // Update the state - > use setter to update the state
+    setUserName(name);
 
   }
   return (
@@ -32,6 +44,8 @@ function App() {
      <UserCard user={user} profile={profile}/>
      <hr />
      <h2>Pass back data part</h2>
+    {/* Use getter {userName} to retrieve the value of state */}
+     <p>User entered : {userName}</p>
      <UserInput onNameChange={handleOnNameChanged}/>
     </>
   )
