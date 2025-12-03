@@ -47,6 +47,8 @@ function App() {
     {/* Use getter {userName} to retrieve the value of state */}
      <p>User entered : {userName}</p>
      <UserInput onNameChange={handleOnNameChanged}/>
+     <hr />
+     <h2>Lab 5 (Counter - State)</h2>
     </>
   )
 }
