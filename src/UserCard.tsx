@@ -1,6 +1,9 @@
 
 // Get it at step 4 
 // To define our data / model class (OOP)
+
+import type React from "react";
+
 // Typescript type - safecheck
 export interface User {
     name:string;
@@ -12,7 +15,11 @@ export interface User {
 // props -> Data that is passed from the parent component
 // to make our component reusable
 
-const UserCard = (user: User) => {
+// Modify from the template tsrafce and  
+// Declare  the type of props that this component will receive
+// Follow declaration highlighted in yellow in page 8 of the lab
+
+const UserCard:React.FC<{user:User}> = ({user}) => {
   return (
     <div>
         <h2>Name: {user.name}</h2>
